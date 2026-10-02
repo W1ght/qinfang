@@ -1,0 +1,8 @@
+node_modules/
+src-tauri/target/
+src-tauri/gen/
+
+# 本机专用（写死了本地路径）
+build.cmd
+src-tauri/.cargo/
+

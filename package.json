@@ -1,0 +1,23 @@
+{
+  "name": "qinfang",
+  "version": "0.1.0",
+  "description": "琴房 · 吉他练习：节拍器、看谱、效果器",
+  "scripts": {
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "tauri": "tauri",
+    "test": "node --test tests/",
+    "library": "node tools/build-library.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@coderline/alphatab": "^1.8.4",
+    "pdfjs-dist": "^6.3.289"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.12.1"
+  }
+}

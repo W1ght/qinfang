@@ -1,0 +1,354 @@
+{
+ "categories": [
+  {
+   "id": "finger",
+   "name": "左手 · 爬格子",
+   "desc": "手指独立性、力量与换把"
+  },
+  {
+   "id": "picking",
+   "name": "右手 · 拨弦",
+   "desc": "交替拨弦、跨弦与速度"
+  },
+  {
+   "id": "legato",
+   "name": "连奏",
+   "desc": "击弦、勾弦的力度与均匀度"
+  },
+  {
+   "id": "scale",
+   "name": "音阶 · 模进",
+   "desc": "指板位置与旋律模进"
+  },
+  {
+   "id": "arpeggio",
+   "name": "琶音 · 扫拨",
+   "desc": "和弦分解与扫拨同步"
+  },
+  {
+   "id": "rhythm",
+   "name": "节奏 · 和弦",
+   "desc": "换和弦、扫弦与闷音节奏"
+  },
+  {
+   "id": "bend",
+   "name": "推弦 · 颤音",
+   "desc": "推弦音准与颤音控制"
+  }
+ ],
+ "exercises": [
+  {
+   "id": "finger-1234",
+   "cat": "finger",
+   "level": 1,
+   "title": "1-2-3-4 爬格子",
+   "start": 60,
+   "goal": 110,
+   "mode": "notes",
+   "tips": "每个手指负责一个品格，按完一个音手指不要急着抬起。先求干净，再求速度。",
+   "bars": 6,
+   "notes": 48
+  },
+  {
+   "id": "finger-shift",
+   "cat": "finger",
+   "level": 2,
+   "title": "爬格子 · 斜向换把",
+   "start": 60,
+   "goal": 120,
+   "mode": "notes",
+   "tips": "每换一根弦整体上移一品。换把时食指带动整个手，拇指跟着移动。",
+   "bars": 3,
+   "notes": 48
+  },
+  {
+   "id": "finger-perm",
+   "cat": "finger",
+   "level": 2,
+   "title": "手指排列 1-3-2-4 / 4-2-3-1",
+   "start": 60,
+   "goal": 120,
+   "mode": "notes",
+   "tips": "打乱手指顺序，专练 3、4 指的独立性。第 5 把位：食指 5 品，小指 8 品。",
+   "bars": 3,
+   "notes": 48
+  },
+  {
+   "id": "finger-spider",
+   "cat": "finger",
+   "level": 3,
+   "title": "蜘蛛爬 · 交叉手指",
+   "start": 60,
+   "goal": 120,
+   "mode": "notes",
+   "tips": "1、3 指一组，2、4 指一组，在相邻两根弦上交替。不弹的手指保持贴近指板。",
+   "bars": 3,
+   "notes": 48
+  },
+  {
+   "id": "finger-stretch",
+   "cat": "finger",
+   "level": 4,
+   "title": "扩张 · 五品跨度",
+   "start": 50,
+   "goal": 100,
+   "mode": "notes",
+   "tips": "食指 7 品、小指 11 品，跨 5 个品格。手腕放低、拇指移到琴颈中后部，感到疼就停。",
+   "bars": 3,
+   "notes": 48
+  },
+  {
+   "id": "pick-open",
+   "cat": "picking",
+   "level": 1,
+   "title": "空弦交替拨弦",
+   "start": 60,
+   "goal": 120,
+   "mode": "notes",
+   "tips": "严格下上交替。手腕发力、动作尽量小，拨片只露出一点点。",
+   "bars": 4,
+   "notes": 48
+  },
+  {
+   "id": "pick-tremolo",
+   "cat": "picking",
+   "level": 2,
+   "title": "四连拨 · 单弦旋律",
+   "start": 70,
+   "goal": 140,
+   "mode": "notes",
+   "tips": "每个音拨四下，换音时左右手要同步。听每一下的音量是否一样。",
+   "bars": 4,
+   "notes": 64
+  },
+  {
+   "id": "pick-crossing",
+   "cat": "picking",
+   "level": 3,
+   "title": "跨弦 · 内外侧拨弦",
+   "start": 60,
+   "goal": 130,
+   "mode": "notes",
+   "tips": "每个音都换弦，体会“内侧”和“外侧”两种跨弦。拨片轨迹走小弧线，别抬太高。",
+   "bars": 4,
+   "notes": 64
+  },
+  {
+   "id": "pick-3nps",
+   "cat": "picking",
+   "level": 4,
+   "title": "三音一弦 · 小调音阶六连音",
+   "start": 60,
+   "goal": 130,
+   "mode": "notes",
+   "tips": "每弦三个音、严格交替拨弦，所以每换一根弦拨弦方向会翻转，这正是难点。",
+   "bars": 3,
+   "notes": 72
+  },
+  {
+   "id": "pick-skip",
+   "cat": "picking",
+   "level": 4,
+   "title": "跳弦 · 隔弦拨奏",
+   "start": 60,
+   "goal": 120,
+   "mode": "notes",
+   "tips": "每两根弦之间跳过一根。不弹的弦用左手手指侧面和右手掌根闷住。",
+   "bars": 4,
+   "notes": 64
+  },
+  {
+   "id": "pick-burst",
+   "cat": "picking",
+   "level": 5,
+   "title": "速度爆发 · 六连音冲刺",
+   "start": 70,
+   "goal": 150,
+   "mode": "notes",
+   "tips": "短促的六连音冲刺接休止，休止时彻底放松。冲刺要跟拍子对齐，不要抢。",
+   "bars": 4,
+   "notes": 48
+  },
+  {
+   "id": "legato-trill",
+   "cat": "legato",
+   "level": 2,
+   "title": "击勾弦 · 颤音组合",
+   "start": 60,
+   "goal": 120,
+   "mode": "notes",
+   "tips": "只拨每拍的第一个音，其余全靠击弦和勾弦。勾弦时手指要往下“勾”一点，音量才够。",
+   "bars": 4,
+   "notes": 64
+  },
+  {
+   "id": "legato-3nps",
+   "cat": "legato",
+   "level": 3,
+   "title": "三音一弦连奏",
+   "start": 60,
+   "goal": 120,
+   "mode": "notes",
+   "tips": "每根弦只拨第一个音：上行击弦、下行勾弦。目标是拨的音和连的音一样响。",
+   "bars": 3,
+   "notes": 72
+  },
+  {
+   "id": "scale-penta",
+   "cat": "scale",
+   "level": 1,
+   "title": "小调五声音阶 · 第一把位",
+   "start": 60,
+   "goal": 120,
+   "mode": "notes",
+   "tips": "摇滚和布鲁斯最常用的音阶。第 5 把位，食指 5 品、小指 8 品。",
+   "bars": 3,
+   "notes": 24
+  },
+  {
+   "id": "scale-major",
+   "cat": "scale",
+   "level": 2,
+   "title": "G 大调音阶 · 两个八度",
+   "start": 60,
+   "goal": 120,
+   "mode": "notes",
+   "tips": "从 6 弦 3 品的 G 开始，上行再下行。边弹边唱出 do re mi，帮助记住音的位置。",
+   "bars": 4,
+   "notes": 29
+  },
+  {
+   "id": "scale-penta-3s",
+   "cat": "scale",
+   "level": 3,
+   "title": "五声音阶 · 三音模进",
+   "start": 60,
+   "goal": 120,
+   "mode": "notes",
+   "tips": "三个音一组、每组往上挪一个音，用三连音弹。重音落在每组第一个音上。",
+   "bars": 5,
+   "notes": 60
+  },
+  {
+   "id": "scale-4s",
+   "cat": "scale",
+   "level": 4,
+   "title": "大调音阶 · 四音模进",
+   "start": 60,
+   "goal": 120,
+   "mode": "notes",
+   "tips": "1234、2345、3456…… 四个音一组。很多经典独奏乐句都是这样串起来的。",
+   "bars": 6,
+   "notes": 96
+  },
+  {
+   "id": "arp-3string",
+   "cat": "arpeggio",
+   "level": 3,
+   "title": "三弦扫拨 · Am C G F",
+   "start": 60,
+   "goal": 120,
+   "mode": "notes",
+   "tips": "下行一笔扫过三根弦，每个音弹完立刻抬起手指闷音，避免几个音糊成一个和弦。",
+   "bars": 4,
+   "notes": 64
+  },
+  {
+   "id": "arp-5string",
+   "cat": "arpeggio",
+   "level": 5,
+   "title": "五弦扫拨 · Am 与 C",
+   "start": 50,
+   "goal": 100,
+   "mode": "notes",
+   "tips": "下扫一笔到底，顶端用击勾弦掉头再上扫。先 50 BPM 把每个音弹清楚，扫拨最忌糊。",
+   "ts": "3 4",
+   "bars": 4,
+   "notes": 48
+  },
+  {
+   "id": "rhythm-power",
+   "cat": "rhythm",
+   "level": 1,
+   "title": "强力和弦 · 闷音八分",
+   "start": 70,
+   "goal": 140,
+   "mode": "timing",
+   "tips": "全部下拨，右手掌根轻搭在琴桥上闷音。换和弦时手形整体平移，不要拆开重按。",
+   "bars": 4,
+   "notes": 32
+  },
+  {
+   "id": "rhythm-open",
+   "cat": "rhythm",
+   "level": 1,
+   "title": "开放和弦转换 · G C D Em",
+   "start": 60,
+   "goal": 120,
+   "mode": "timing",
+   "tips": "每拍一下。第四拍就要开始换和弦，提前看好下一个和弦的指型。",
+   "bars": 4,
+   "notes": 16
+  },
+  {
+   "id": "rhythm-16th",
+   "cat": "rhythm",
+   "level": 2,
+   "title": "十六分扫弦 · Em C G D",
+   "start": 60,
+   "goal": 100,
+   "mode": "timing",
+   "tips": "右手保持下上下上不停，像钟摆一样。重音放在每拍第一下。",
+   "bars": 4,
+   "notes": 64
+  },
+  {
+   "id": "rhythm-barre",
+   "cat": "rhythm",
+   "level": 2,
+   "title": "横按和弦 · F Bm Am E",
+   "start": 60,
+   "goal": 110,
+   "mode": "timing",
+   "tips": "食指用外侧（靠拇指那边）横按，力量来自手臂往后拉，而不是拇指死捏。",
+   "bars": 4,
+   "notes": 24
+  },
+  {
+   "id": "rhythm-gallop",
+   "cat": "rhythm",
+   "level": 3,
+   "title": "金属马蹄节奏",
+   "start": 80,
+   "goal": 160,
+   "mode": "timing",
+   "tips": "“哒-哒哒”：下-下上。闷音要紧，三个音的音量尽量一样。",
+   "bars": 4,
+   "notes": 48
+  },
+  {
+   "id": "bend-pitch",
+   "cat": "bend",
+   "level": 2,
+   "title": "推弦音准 · 全音与半音",
+   "start": 60,
+   "goal": 90,
+   "mode": "bend",
+   "tips": "先弹目标音记住音高，再推弦推到同样的音高。用 2、3 指一起推，测评会显示推高了还是推低了。",
+   "bars": 6,
+   "notes": 12
+  },
+  {
+   "id": "bend-vibrato",
+   "cat": "bend",
+   "level": 3,
+   "title": "颤音 · 五声音阶长音",
+   "start": 60,
+   "goal": 100,
+   "mode": "notes",
+   "tips": "颤音的幅度和速度要均匀。先慢颤（每拍两次），再加快到每拍四次。",
+   "bars": 4,
+   "notes": 8
+  }
+ ]
+}
