@@ -27,6 +27,10 @@ Rust 原生音频引擎（[cpal](https://github.com/RustAudio/cpal)），支持 
 - 节拍器：30–300 BPM、拍号与细分、逐拍重音/静音、敲击测速、渐进提速。
 - 看谱：Guitar Pro（gp3–gp7）、MusicXML、alphaTex（由 [alphaTab](https://alphatab.net) 渲染并可播放）、PDF（[pdf.js](https://mozilla.github.io/pdf.js/)）、图片、文本六线谱；自动滚动、夜间谱面、翻页器/方向键翻页。
 
+## 下载
+
+在 [Releases](https://github.com/W1ght/qinfang/releases) 下载 `Qinfang_版本号_x64-setup.exe`（安装版）或 `Qinfang_版本号_x64-portable.exe`（免安装，需系统自带 WebView2，Windows 10/11 一般都有）。每次推送到 main 的构建产物也可以在 Actions 页面下载。
+
 ## 从源码构建
 
 需要：Node.js 20+、Rust（MSVC 工具链）、Visual Studio Build Tools（C++）、[LLVM](https://releases.llvm.org/)（ASIO 绑定生成用 libclang）。
@@ -51,7 +55,18 @@ cd src-tauri && cargo test --release   # DSP 与音频分析测试
 
 前端在 `src/`，无需打包工具，也可以直接用任意静态服务器在浏览器里打开（此时效果器退回 Web Audio，测评不可用）。
 
-## 第三方组件
+## 发布新版本
+
+1. 同步修改 `src-tauri/tauri.conf.json`、`src-tauri/Cargo.toml`、`package.json` 里的版本号并提交。
+2. 推送同名标签：`git tag v0.2.0 && git push origin v0.2.0`。
+
+GitHub Actions（`.github/workflows/build.yml`）会在 Windows 上跑测试、打包，并把安装包发布到 Releases。标签与版本号不一致时会失败。
+
+## 许可证
+
+本项目以 [MIT 许可证](LICENSE) 发布。第三方组件保留各自的许可证，见下表。
+
+### 第三方组件
 
 | 组件 | 许可证 |
 | --- | --- |
