@@ -88,8 +88,8 @@ export class Metronome extends EventTarget {
     while (this.nextTime < ctx.currentTime + LOOKAHEAD) {
       const { accents, subdiv } = this.state;
       const level = this.sub === 0 ? accents[this.beat] : (accents[this.beat] === 0 ? 0 : 0.5);
-      if (level > 0) this.click(this.nextTime, level);
-      this.queue.push({ time: this.nextTime, beat: this.beat, sub: this.sub, bar: this.bar });
+      const gain = level > 0 ? this.click(this.nextTime, level) : null;
+      this.queue.push({ time: this.nextTime, beat: this.beat, sub: this.sub, bar: this.bar, gain });
       this.nextTime += 60 / this.state.bpm / subdiv;
       if (++this.sub >= subdiv) {
         this.sub = 0;
@@ -100,6 +100,24 @@ export class Metronome extends EventTarget {
         }
       }
     }
+  }
+
+  /** 让第一拍（重拍）从此刻响起：撤掉已排好但还没响的拍子，从这里重新数小节。 */
+  downbeatNow() {
+    if (!this.running) { this.start(); return; }
+    const ctx = getAudioContext();
+    const now = ctx.currentTime;
+    const keep = this.queue.filter((ev) => ev.time <= now);
+    const pending = this.queue.filter((ev) => ev.time > now);
+    for (const ev of pending) ev.gain?.disconnect();
+    this.queue = keep;
+    // 被撤掉的第一拍代表「本来接下来要响的位置」；不在小节开头就算新起一小节
+    const next = pending[0] ?? { beat: this.beat, sub: this.sub, bar: this.bar };
+    this.bar = next.bar + (next.beat === 0 && next.sub === 0 ? 0 : 1);
+    this.beat = 0;
+    this.sub = 0;
+    this.nextTime = now + 0.01;
+    this.schedule();
   }
 
   onBarDone() {
@@ -172,6 +190,7 @@ export class Metronome extends EventTarget {
         osc('sine', level === 2 ? 1760 : level === 1 ? 1320 : 990, 0, 0.05);
       }
     }
+    return g;
   }
 
   noiseBurst(t, dest, type, freq, dur, amp) {
@@ -288,6 +307,8 @@ export function initMetronomeUI(metro) {
     setTimeout(() => btn.classList.remove('toggled'), 90);
   };
   $('tapBtn').addEventListener('click', tap);
+  const downbeat = () => metro.downbeatNow();
+  $('downbeatBtn').addEventListener('click', downbeat);
 
   metro.addEventListener('change', (e) => {
     renderValues();
@@ -344,7 +365,7 @@ export function initMetronomeUI(metro) {
   renderBeats();
   renderValues();
   updateTrainerStatus();
-  return { tap, nudge };
+  return { tap, nudge, downbeat };
 }
 
 /** 按住按钮连续调整。 */

@@ -148,7 +148,7 @@ input[type="range"] { accent-color: var(--accent); cursor: pointer; }
 .bpm-num.flash { color: var(--accent-2); }
 .bpm-sub { color: var(--muted); margin-top: 6px; letter-spacing: .05em; }
 .wide-range { width: min(520px, 100%); }
-.transport { display: flex; gap: 12px; }
+.transport { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
 .transport .btn-big { min-width: 140px; }
 .hint { color: var(--muted); font-size: 12px; margin: 0; text-align: center; }
 .trainer-grid { display: flex; flex-wrap: wrap; gap: 10px 14px; color: var(--muted); }

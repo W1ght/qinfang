@@ -64,6 +64,7 @@ window.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowUp' || e.key === 'ArrowRight') { metroUI.nudge(step); e.preventDefault(); }
     else if (e.key === 'ArrowDown' || e.key === 'ArrowLeft') { metroUI.nudge(-step); e.preventDefault(); }
     else if (e.key === 't' || e.key === 'T') metroUI.tap();
+    else if (e.key === '1' && !e.ctrlKey) metroUI.downbeat();
   }
 });
 
